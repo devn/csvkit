@@ -136,7 +136,7 @@ def normalize_column_type(l, normal_type=None, blanks_as_nulls=True):
                     add(NoneType)
                     continue
 
-                d = parse(x, default=DEFAULT_DATETIME)
+                d = parse(x, default=DEFAULT_DATETIME, ignoretz=True)
 
                 # Is it only a time?
                 if d.date() == NULL_DATE:
